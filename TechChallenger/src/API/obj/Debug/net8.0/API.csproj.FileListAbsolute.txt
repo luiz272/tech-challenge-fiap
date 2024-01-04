@@ -177,3 +177,6 @@
 /Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/bin/Debug/net8.0/HealthChecks.Redis.dll
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/bin/Debug/net8.0/StackExchange.Redis.dll

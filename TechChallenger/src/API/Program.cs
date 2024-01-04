@@ -12,7 +12,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHealthChecks()
     .AddNpgSql(builder.Configuration.GetSection("DatabaseSettings:ConnectionString").Value,
-        name: "postgreSQL", tags: new string[] { "db", "data" });
+        name: "postgreSQL", tags: new string[] { "db", "data" })
+    .AddRedis(builder.Configuration.GetSection("DatabaseSettings:ConnectionStringRedis").Value,
+        name: "redis", tags: new string[] { "cache", "data" });
 
 builder.Services.AddHealthChecksUI(opt =>
 {
