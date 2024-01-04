@@ -1,6 +1,7 @@
+using Domain.Base;
+
 namespace Domain.Entities;
 
-public class Order
+public class Order : IAggregateRoot
 {
-    
 }

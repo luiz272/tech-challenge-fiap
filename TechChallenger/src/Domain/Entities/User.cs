@@ -1,6 +1,7 @@
+using Domain.Base;
+
 namespace Domain.Entities;
 
-public class User
+public class User : IAggregateRoot
 {
-    
 }
