@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ixQID6DFm106KJApXGHde2AEJthhSzFHHEK3LN0E+mH3tjPtkGaNXnHL41g7EZK36NJEtYAVdjSn7JNVlObPwg==",
+  "dgSpecHash": "ZqAhgE/rmXiErWOrgGPJzxBHbab9AUE+09+U1KwV/WKUTmmF97LEJ/G5woJuNmrRTmrG6LFDa3bMt2Gg0oA7GA==",
   "success": true,
-  "projectFilePath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/API.csproj",
+  "projectFilePath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/jonatas/.nuget/packages/aspnetcore.healthchecks.npgsql/8.0.0/aspnetcore.healthchecks.npgsql.8.0.0.nupkg.sha512",
     "/Users/jonatas/.nuget/packages/aspnetcore.healthchecks.redis/8.0.0/aspnetcore.healthchecks.redis.8.0.0.nupkg.sha512",

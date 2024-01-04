@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Domain/Domain.csproj",
+      "projectUniqueName": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Domain/Domain.csproj",
+      "projectPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Domain.csproj",
       "packagesPath": "/Users/jonatas/.nuget/packages/",
-      "outputPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Domain/obj/",
+      "outputPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jonatas/.nuget/NuGet/NuGet.Config"

@@ -4041,11 +4041,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/API.csproj",
+      "projectUniqueName": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/API.csproj",
+      "projectPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/API.csproj",
       "packagesPath": "/Users/jonatas/.nuget/packages/",
-      "outputPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/obj/",
+      "outputPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jonatas/.nuget/NuGet/NuGet.Config"
