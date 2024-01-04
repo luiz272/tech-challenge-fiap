@@ -9,7 +9,8 @@
       "API/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "8.0.0-rc.2.23480.2",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "Swashbuckle.AspNetCore.ReDoc": "6.5.0"
         },
         "runtime": {
           "API.dll": {}
@@ -41,6 +42,14 @@
           "Swashbuckle.AspNetCore.Swagger": "6.4.0",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.4.0",
           "Swashbuckle.AspNetCore.SwaggerUI": "6.4.0"
+        }
+      },
+      "Swashbuckle.AspNetCore.ReDoc/6.5.0": {
+        "runtime": {
+          "lib/net7.0/Swashbuckle.AspNetCore.ReDoc.dll": {
+            "assemblyVersion": "6.5.0.0",
+            "fileVersion": "6.5.0.0"
+          }
         }
       },
       "Swashbuckle.AspNetCore.Swagger/6.4.0": {
@@ -108,6 +117,13 @@
       "sha512": "sha512-eUBr4TW0up6oKDA5Xwkul289uqSMgY0xGN4pnbOIBqCcN9VKGGaPvHX3vWaG/hvocfGDP+MGzMA0bBBKz2fkmQ==",
       "path": "swashbuckle.aspnetcore/6.4.0",
       "hashPath": "swashbuckle.aspnetcore.6.4.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.ReDoc/6.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MlysLblpiWftmqhMGaBEymkroFBlssFZzKr+7YHvvBrV5ymwAjdJ7bDBTTv5/qhaPZK6HoMu1ig3IwK2YtLTOg==",
+      "path": "swashbuckle.aspnetcore.redoc/6.5.0",
+      "hashPath": "swashbuckle.aspnetcore.redoc.6.5.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.Swagger/6.4.0": {
       "type": "package",

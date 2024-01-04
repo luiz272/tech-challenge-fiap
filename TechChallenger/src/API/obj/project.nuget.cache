@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ju1GUK+Y31G+6OGdcLTu+5GW3aHNXvHcclDYkNo/ORxwwozz5AxzfVuDTJSIpLY+kXvyHycw+cEuD1uz+C5uEg==",
+  "dgSpecHash": "YY2Xp0qeKVKszHZu1wVb5BlAmLNT6tlcjhWQabP8h0UpxeV84m7+Nw+/JFnq1G/brz/ji1Ampa/EJoAuwyHMKQ==",
   "success": true,
   "projectFilePath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/API/API.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "/Users/jonatas/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/jonatas/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
     "/Users/jonatas/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/Users/jonatas/.nuget/packages/swashbuckle.aspnetcore.redoc/6.5.0/swashbuckle.aspnetcore.redoc.6.5.0.nupkg.sha512",
     "/Users/jonatas/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "/Users/jonatas/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
     "/Users/jonatas/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
