@@ -8,11 +8,13 @@
     ".NETCoreApp,Version=v8.0": {
       "API/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
           "AspNetCore.HealthChecks.NpgSql": "8.0.0",
           "AspNetCore.HealthChecks.Redis": "8.0.0",
           "AspNetCore.HealthChecks.UI": "8.0.0",
           "AspNetCore.HealthChecks.UI.Client": "8.0.0",
           "AspNetCore.HealthChecks.UI.InMemory.Storage": "8.0.0",
+          "Infra": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.0-rc.2.23480.2",
           "Swashbuckle.AspNetCore": "6.4.0",
           "Swashbuckle.AspNetCore.ReDoc": "6.5.0"
@@ -980,6 +982,27 @@
             "fileVersion": "13.3.1.0"
           }
         }
+      },
+      "Application/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "Application.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {}
+        }
+      },
+      "Infra/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "Infra.dll": {}
+        }
       }
     }
   },
@@ -1548,6 +1571,21 @@
       "sha512": "sha512-Q2dqDsb0xAlr092grgHk8/vTXI2snIiYM5ND3IXkgJDFIdPnqDYwYnlk+gwzSeRByDLhiSzTog8uT7xFwH68Zg==",
       "path": "yamldotnet/13.3.1",
       "hashPath": "yamldotnet.13.3.1.nupkg.sha512"
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
