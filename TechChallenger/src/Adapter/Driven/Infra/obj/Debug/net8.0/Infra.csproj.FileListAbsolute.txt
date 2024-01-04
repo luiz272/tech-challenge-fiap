@@ -1,0 +1,16 @@
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/bin/Debug/net8.0/Infra.deps.json
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/bin/Debug/net8.0/Infra.dll
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/bin/Debug/net8.0/Infra.pdb
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/bin/Debug/net8.0/Domain.dll
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/bin/Debug/net8.0/Domain.pdb
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.csproj.AssemblyReference.cache
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.AssemblyInfoInputs.cache
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.AssemblyInfo.cs
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.csproj.CoreCompileInputs.cache
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.sourcelink.json
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.csproj.CopyComplete
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.dll
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/refint/Infra.dll
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/Infra.pdb
+/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/obj/Debug/net8.0/ref/Infra.dll
