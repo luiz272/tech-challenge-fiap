@@ -1,4 +1,7 @@
+using Application.UseCases;
+using Domain.Repositories;
 using HealthChecks.UI.Client;
+using Infra.Repositories;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,6 +30,9 @@ builder.Services.AddHealthChecksUI(opt =>
 }).AddInMemoryStorage();
 
 #endregion
+
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IUserUseCase, UserUseCase>();
 
 var app = builder.Build();
 
@@ -57,4 +63,3 @@ app.UseHealthChecks("/health", new HealthCheckOptions
 app.MapControllers();
 
 app.Run();
-
