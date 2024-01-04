@@ -9,9 +9,6 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
-
-using UserRegistrationFeature = Domain.Tests.Features.UserRegistrationFeature;
-
 #pragma warning disable
 namespace Domain.Tests.Features
 {
@@ -22,7 +19,7 @@ namespace Domain.Tests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "4.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class UserRegistrationFeature : object, Xunit.IClassFixture<UserRegistrationFeature.FixtureData>, Xunit.IAsyncLifetime
+    public partial class CadastroDeUsuarioFeature : object, Xunit.IClassFixture<CadastroDeUsuarioFeature.FixtureData>, Xunit.IAsyncLifetime
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -34,7 +31,7 @@ namespace Domain.Tests.Features
 #line 1 "CadastrarUsuario.feature"
 #line hidden
         
-        public UserRegistrationFeature(UserRegistrationFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CadastroDeUsuarioFeature(CadastroDeUsuarioFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
         }
@@ -42,8 +39,8 @@ namespace Domain.Tests.Features
         public static async System.Threading.Tasks.Task FeatureSetupAsync()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunnerForAssembly(null, TechTalk.SpecFlow.xUnit.SpecFlowPlugin.XUnitParallelWorkerTracker.Instance.GetWorkerId());
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "features", "User Registration", "As a new user\nI want to register on the system\nSo that I can access exclusive fea" +
-                    "tures", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-BR"), "features", "Cadastro de Usuário", "Como um novo usuário\nEu quero me cadastrar no sistema\nPara poder acessar os recur" +
+                    "sos exclusivos", ProgrammingLanguage.CSharp, featureTags);
             await testRunner.OnFeatureStartAsync(featureInfo);
         }
         
@@ -90,16 +87,16 @@ namespace Domain.Tests.Features
             await this.TestTearDownAsync();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Successful registration of a new user")]
-        [Xunit.TraitAttribute("FeatureTitle", "User Registration")]
-        [Xunit.TraitAttribute("Description", "Successful registration of a new user")]
-        public async System.Threading.Tasks.Task SuccessfulRegistrationOfANewUser()
+        [Xunit.SkippableFactAttribute(DisplayName="Cadastro bem-sucedido de um novo usuário")]
+        [Xunit.TraitAttribute("FeatureTitle", "Cadastro de Usuário")]
+        [Xunit.TraitAttribute("Description", "Cadastro bem-sucedido de um novo usuário")]
+        public async System.Threading.Tasks.Task CadastroBem_SucedidoDeUmNovoUsuario()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful registration of a new user", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 6
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cadastro bem-sucedido de um novo usuário", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 7
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -108,29 +105,21 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 7
-await testRunner.GivenAsync("that I am on the registration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "John Silva"});
-                table1.AddRow(new string[] {
-                            "CPF",
-                            "123.456.789-09"});
-                table1.AddRow(new string[] {
-                            "Email",
-                            "john@email.com"});
 #line 8
-await testRunner.WhenAsync("I fill out the form with the following information:", ((string)(null)), table1, "When ");
+        await testRunner.GivenAsync("que estou na página de cadastro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 9
+        await testRunner.WhenAsync("preencho o formulário com as seguintes informações: nome: \"Jonatas\", cpf: \"11111\"" +
+                        ", email: \"teste@gmail.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line hidden
+#line 10
+        await testRunner.AndAsync("clico no botão de cadastrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 11
+        await testRunner.ThenAsync("devo ser redirecionado para a página inicial", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line hidden
 #line 12
-await testRunner.AndAsync("I click the register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 13
-await testRunner.ThenAsync("I should be redirected to the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 14
-await testRunner.AndAsync("I see a welcome message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        await testRunner.AndAsync("vejo uma mensagem de boas-vindas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
@@ -143,12 +132,12 @@ await testRunner.AndAsync("I see a welcome message", ((string)(null)), ((TechTal
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.InitializeAsync()
             {
-                await UserRegistrationFeature.FeatureSetupAsync();
+                await CadastroDeUsuarioFeature.FeatureSetupAsync();
             }
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.DisposeAsync()
             {
-                await UserRegistrationFeature.FeatureTearDownAsync();
+                await CadastroDeUsuarioFeature.FeatureTearDownAsync();
             }
         }
     }
