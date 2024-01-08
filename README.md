@@ -5,7 +5,7 @@ Sistema de pedidos de uma lanchonete de bairro
 
 ## Grupo
   - Marlon - RM X
-  - Zanaro - RM X
+  - Zanaro - RM 352692
   - Jônatas - RM 353060
   - Matheus - RM 352813
   - Luiz - RM 353114
