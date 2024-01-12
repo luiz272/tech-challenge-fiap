@@ -1,8 +1,10 @@
 using Application.UseCases;
 using Domain.Repositories;
 using HealthChecks.UI.Client;
+using Infra.Context;
 using Infra.Repositories;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +32,9 @@ builder.Services.AddHealthChecksUI(opt =>
 }).AddInMemoryStorage();
 
 #endregion
+
+builder.Services.AddDbContext<TechContext>(options => options
+        .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserUseCase, UserUseCase>();

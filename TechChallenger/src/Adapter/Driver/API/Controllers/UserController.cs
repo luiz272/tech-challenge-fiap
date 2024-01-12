@@ -19,7 +19,7 @@ namespace API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_userUseCase.GetUsers());
+            return Ok();
         }
     }
 }

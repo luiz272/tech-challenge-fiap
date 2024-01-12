@@ -3,21 +3,16 @@ using Domain.ValueObjects;
 
 namespace Domain.Entities;
 
-public class User : IAggregateRoot
+public class User : BaseEntity, IAggregateRoot
 {
-    public string Name { get; private set; }
-    public CPF CPF { get; private set; }
-
-    public User(string name, CPF cPF)
+    public User(string name, string mail, string password)
     {
         Name = name;
-        CPF = cPF;
-
-        ValidateEntity();
+        Mail = mail;
+        Password = password;
     }
 
-    private void ValidateEntity()
-    {
-        AssertionConcern.AssertArgumentNotEmpty(Name, "The name cant be empty");
-    }
+    public string Name { get; private set; }
+    public string Mail { get; private set; }
+    public string Password { get; private set; }
 }

@@ -12,8 +12,4 @@ public class UserUseCase : IUserUseCase
         _userRepository = userRepository;
     }
 
-    public IList<User> GetUsers()
-    {
-        return _userRepository.GetUsers();
-    }
 }

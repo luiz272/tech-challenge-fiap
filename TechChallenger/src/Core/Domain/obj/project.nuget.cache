@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lJcjAxEehuBoqlqPMicuoTJd3Ph6j+juE4Bi5gm3JPse/tm/Yu+fGKiRNX47LRKn6O9RssK+A85+sWMMKeKwew==",
+  "dgSpecHash": "+E2oH06U/xW+YG7qt39u5MRy2h0SG/mU7JL05+q2mr/HmQmgzRJqwtXUb3xtTjlofrROY9EDjSv+Wl7GG8IVQQ==",
   "success": true,
-  "projectFilePath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\GitKraken\\FIAP\\TechChallenger\\src\\Core\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leona\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0\\microsoft.entityframeworkcore.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
