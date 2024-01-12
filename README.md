@@ -14,7 +14,7 @@ Sistema de pedidos de uma lanchonete de bairro
   - Acompanhamento (Click Up): https://app.clickup.com/9017094286/v/b/8cqbw4e-57
   - Arquitetura (Miro): https://miro.com/app/board/uXjVNQfujpo=/
   - Linguagem: C#
-  - Banco de Dados: TBD
+  - Banco de Dados: Postgres
   - Infraestrutura: Containers em Docker
 
 ## Detalhes do Projeto
