@@ -17,8 +17,8 @@ builder.Services.AddControllers();
 #region [Healthcheck]
 
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetSection("DatabaseSettings:ConnectionString").Value,
-        name: "postgreSQL", tags: new string[] { "db", "data" })
+    // .AddNpgSql(builder.Configuration.GetSection("DatabaseSettings:ConnectionString").Value,
+    //     name: "postgreSQL", tags: new string[] { "db", "data" })
     .AddRedis(builder.Configuration.GetSection("DatabaseSettings:ConnectionStringRedis").Value,
         name: "redis", tags: new string[] { "cache", "data" });
 
@@ -34,7 +34,7 @@ builder.Services.AddHealthChecksUI(opt =>
 #endregion
 
 builder.Services.AddDbContext<TechContext>(options => options
-        .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+        .UseNpgsql(builder.Configuration.GetConnectionString("User ID=postgres;Password=T3cHCh@113ng3;Host=techchallenger-postgres_image-1;Port=5432;Database=postgres;Pooling=true;")));
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserUseCase, UserUseCase>();
