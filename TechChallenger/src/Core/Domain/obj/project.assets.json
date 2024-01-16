@@ -39,19 +39,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leona\\.nuget\\packages\\": {}
+    "/Users/jonatas/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitKraken\\FIAP\\TechChallenger\\src\\Core\\Domain\\Domain.csproj",
+      "projectUniqueName": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\GitKraken\\FIAP\\TechChallenger\\src\\Core\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-      "outputPath": "C:\\GitKraken\\FIAP\\TechChallenger\\src\\Core\\Domain\\obj\\",
+      "projectPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Domain.csproj",
+      "packagesPath": "/Users/jonatas/.nuget/packages/",
+      "outputPath": "/Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/jonatas/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -96,7 +96,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
