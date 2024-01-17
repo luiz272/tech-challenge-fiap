@@ -17,7 +17,7 @@ builder.Services.AddControllers();
 #region [Healthcheck]
 
 builder.Services.AddHealthChecks()
-    // .AddNpgSql(builder.Configuration.GetSection("DatabaseSettings:ConnectionString").Value,
+    // .AddNpgSql(builder.Configuration.GetSection("DatabaseSettings:ConnectionString").Value, // Obs: tava dando erro
     //     name: "postgreSQL", tags: new string[] { "db", "data" })
     .AddRedis(builder.Configuration.GetSection("DatabaseSettings:ConnectionStringRedis").Value,
         name: "redis", tags: new string[] { "cache", "data" });
@@ -34,7 +34,7 @@ builder.Services.AddHealthChecksUI(opt =>
 #endregion
 
 builder.Services.AddDbContext<TechContext>(options => options
-        .UseNpgsql(builder.Configuration.GetConnectionString("User ID=postgres;Password=T3cHCh@113ng3;Host=techchallenger-postgres_image-1;Port=5432;Database=postgres;Pooling=true;")));
+        .UseNpgsql("User ID=postgres;Password=T3cHCh@113ng3;Host=localhost;Port=5432;Database=postgres;Pooling=true;")); // Mudar para ConnectionString do JSON // Obs: tava dando erro
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserUseCase, UserUseCase>();
