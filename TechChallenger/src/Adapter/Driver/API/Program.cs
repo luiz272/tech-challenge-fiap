@@ -39,6 +39,10 @@ builder.Services.AddDbContext<TechContext>(options => options
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserUseCase, UserUseCase>();
 
+builder.Services.AddTransient<IIngredientRepository, IngredientRepository>();
+builder.Services.AddTransient<IIngredientUseCase, IngredientUseCase>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

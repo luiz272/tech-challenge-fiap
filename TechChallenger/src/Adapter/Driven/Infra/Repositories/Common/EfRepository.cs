@@ -1,6 +1,6 @@
 
 using Domain.Base;
-using Domain.Repositories.common;
+using Domain.Repositories.Common;
 using Infra.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +12,9 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
     protected EfRepository(TechContext context) : base(context)
     {
     }
+
+    public IEnumerable<TEntity> GetAll() =>
+        DbSet.AsNoTracking().ToListAsync().Result;
 
     public void Add(TEntity entity) =>
         DbSet.Add(entity);

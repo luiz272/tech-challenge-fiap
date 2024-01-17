@@ -1,6 +1,6 @@
 using Domain.Base;
 
-namespace Domain.Repositories.common;
+namespace Domain.Repositories.Common;
 
 public interface IAsyncRepository<TEntity> : IRepository where TEntity : BaseEntity, IAggregateRoot
 {
@@ -10,6 +10,9 @@ public interface IAsyncRepository<TEntity> : IRepository where TEntity : BaseEnt
     void UpdateRange(IEnumerable<TEntity> entities);
     void Remove(TEntity entity);
     void RemoveRange(IEnumerable<TEntity> entities);
+
+    // Obs: nao sei se esta certo, mas nao tinha get
+    IEnumerable<TEntity> GetAll();
 }
 
 public interface IRepository
