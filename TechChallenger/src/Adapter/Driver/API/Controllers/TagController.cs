@@ -66,5 +66,26 @@ namespace API.Controllers
             }
         }
         
+        [HttpPut]
+        public IActionResult UpdateIngredient([FromBody] Tag model)
+        {
+            if (model == null)
+            {
+                return BadRequest("Invalid tag data");
+            }
+
+            try
+            {
+                _tagUseCase.UpdateTag(model);
+                
+                return Ok("Tag foi criada com sucesso");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error creating tag: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
     }
 }

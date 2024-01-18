@@ -11,6 +11,7 @@ namespace Application.UseCases
     {
         IEnumerable<Tag> GetAllTags();
         void CreateTag(Tag tag);
+        void UpdateTag(Tag tag);
         void RemoveTag(Guid id);
     }
 }
