@@ -1,4 +1,5 @@
 using Application.UseCases;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -21,6 +22,63 @@ namespace API.Controllers
         {
          
             return Ok(_ingredientUseCase.GetAllIngredients());
+        }
+        [HttpPost]
+        public IActionResult CreateIngredient([FromBody] Ingredient model)
+        {
+            if (model == null)
+            {
+                return BadRequest("Invalid ingredient data");
+            }
+
+            try
+            {
+                _ingredientUseCase.CreateIngredient(model);
+
+                return Ok("Categoria foi criada com sucesso");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error creating ingredient: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
+        [HttpPut]
+        public IActionResult UpdateIngredient([FromBody] Ingredient model)
+        {
+            if (model == null)
+            {
+                return BadRequest("Invalid ingredient data");
+            }
+
+            try
+            {
+                _ingredientUseCase.UpdateIngredient(model);
+
+                return Ok("Ingrediente foi criada com sucesso");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error creating ingredient: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpDelete]
+        public IActionResult RemoveIngredient(Guid id)
+        {
+            try
+            {
+                _ingredientUseCase.RemoveIngredient(id);
+
+                return Ok("Categoria foi removida com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error removing ingredient: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
         }
     }
 }

@@ -10,5 +10,8 @@ namespace Application.UseCases
     public interface IIngredientUseCase
     {
         IEnumerable<Ingredient> GetAllIngredients();
+        void CreateIngredient(Ingredient ingredient);
+        void UpdateIngredient(Ingredient ingredient);
+        void RemoveIngredient(Guid id);
     }
 }

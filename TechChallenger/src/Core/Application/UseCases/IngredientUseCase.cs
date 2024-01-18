@@ -16,5 +16,19 @@ public class IngredientUseCase : IIngredientUseCase
     {
         return _ingredientRepository.GetAll();
     }
+    public void CreateIngredient(Ingredient model)
+    {
+        _ingredientRepository.Add(model);
+    }
 
+    public void UpdateIngredient(Ingredient model)
+    {
+        _ingredientRepository.Update(model);
+    }
+
+    public void RemoveIngredient(Guid id)
+    {
+        var ingredient = _ingredientRepository.GetByIdAsync(id);
+        _ingredientRepository.Remove(ingredient);
+    }
 }
