@@ -21,4 +21,10 @@ public class TagUseCase : ITagUseCase
     {
         _tagRepository.Add(tag);
     }
+    
+    public void RemoveTag(Guid id)
+    {
+        var tag = _tagRepository.GetByIdAsync(id);
+        _tagRepository.Remove(tag);
+    }
 }

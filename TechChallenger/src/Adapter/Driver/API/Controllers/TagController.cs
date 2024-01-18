@@ -45,5 +45,26 @@ namespace API.Controllers
             }
         }
         
+        [HttpDelete]
+        public IActionResult DeleteTag([FromBody] Guid id)
+        {
+            if (id == null)
+            {
+                return BadRequest("Invalid id data");
+            }
+
+            try
+            {
+                _tagUseCase.RemoveTag(id);
+
+                return Ok("Tag removida com sucesso");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error creating tag: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
     }
 }

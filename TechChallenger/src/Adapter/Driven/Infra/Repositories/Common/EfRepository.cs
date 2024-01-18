@@ -21,7 +21,6 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
 
     public void Add(TEntity entity)
     {
-        
         DbSet.Add(entity);
         SaveChanges();
     }
@@ -36,8 +35,11 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
     public void UpdateRange(IEnumerable<TEntity> entities) =>
         DbSet.UpdateRange(entities);
 
-    public void Remove(TEntity entity) =>
+    public void Remove(TEntity entity)
+    {
         DbSet.Remove(entity);
+        SaveChanges();
+    }
 
     public void RemoveRange(IEnumerable<TEntity> entities) =>
         DbSet.RemoveRange(entities);
@@ -48,6 +50,6 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
         _context.SaveChanges();
     }
 
-    public virtual async Task<TEntity> GetByIdAsync(Guid id, bool readOnly = false) =>
-        readOnly ? await DbSet.AsNoTracking().FirstOrDefaultAsync(e => e.Id == id) : await DbSet.FindAsync(id);
+    public TEntity GetByIdAsync(Guid id) =>
+         DbSet.AsNoTracking().FirstOrDefault(e => e.Id == id);
 }
