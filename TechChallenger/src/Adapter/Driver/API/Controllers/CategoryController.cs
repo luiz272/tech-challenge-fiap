@@ -1,4 +1,5 @@
 using Application.UseCases;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -7,6 +8,7 @@ namespace API.Controllers
     [Route("[controller]")]
     public class CategoriesController : ControllerBase
     {
+        private readonly IMapper mapper;
         private readonly ILogger<CategoriesController> _logger;
         private readonly ICategoryUseCase _categoryUseCase;
 

@@ -4,6 +4,7 @@ using HealthChecks.UI.Client;
 using Infra.Context;
 using Infra.Repositories;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,6 +26,8 @@ builder.Services.AddTransient<IIngredientUseCase, IngredientUseCase>();
 
 builder.Services.AddTransient<ITagRepository, TagRepository>();
 builder.Services.AddTransient<ITagUseCase, TagUseCase>();
+
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
