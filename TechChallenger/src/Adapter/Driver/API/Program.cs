@@ -34,7 +34,7 @@ builder.Services.AddHealthChecksUI(opt =>
 #endregion
 
 builder.Services.AddDbContext<TechContext>(options => options
-        .UseNpgsql("User ID=postgres;Password=jl99oe99;Host=localhost;Port=5432;Database=postgres;Pooling=true;")); // Mudar para ConnectionString do JSON // Obs: tava dando erro
+        .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))); // Mudar para ConnectionString do JSON // Obs: tava dando erro
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserUseCase, UserUseCase>();

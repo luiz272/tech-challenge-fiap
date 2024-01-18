@@ -33,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/292ff7304d9778dd29339a9c5574c95a99b1116f14da6ea1020b7f21598ab92/NpgSqlHealthCheckBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/35f3a54f5acb408a3e219b2de039f1a39557b7e4515f11238cba07b60c0ce/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/951ae8d4212555ed2042cdaab14de05c17e73221e3f5c17fc22282374a3cd/InvalidOperationException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/Domain.Tests/features/CadastrarUsuario.feature" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/Domain.Tests/features/CadastrarUsuario.feature.cs" root0="FORCE_HIGHLIGHTING" />
