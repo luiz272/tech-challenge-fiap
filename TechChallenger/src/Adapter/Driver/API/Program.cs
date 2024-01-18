@@ -28,6 +28,8 @@ builder.Services.AddTransient<ITagUseCase, TagUseCase>();
 
 var app = builder.Build();
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -45,4 +47,9 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-app.Run();
+using var scope = app.Services.CreateScope();
+
+var context = scope.ServiceProvider.GetRequiredService<TechContext>();
+await context.Database.MigrateAsync();
+
+await app.RunAsync();
