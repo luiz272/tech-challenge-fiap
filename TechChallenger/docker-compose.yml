@@ -13,9 +13,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:80"
+      - "8000:8080"
     environment:
-      DB_CONNECTION_STRING: "host=postgres_image;port=5432;database=postgres;username=postgres;password=T3cHCh@113ng3"
+      DB_CONNECTION_STRING: "host=postgres_image;port=5432;database=postgres;User ID=postgres;password=T3cHCh@113ng3"
     networks:
       - dockerapi-dev
   

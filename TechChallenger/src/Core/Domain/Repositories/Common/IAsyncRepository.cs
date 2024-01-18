@@ -13,6 +13,7 @@ public interface IAsyncRepository<TEntity> : IRepository where TEntity : BaseEnt
 
     // Obs: nao sei se esta certo, mas nao tinha get
     IEnumerable<TEntity> GetAll();
+    TEntity GetByIdAsync(Guid id);
 }
 
 public interface IRepository

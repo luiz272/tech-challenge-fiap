@@ -14,27 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
-#region [Healthcheck]
-
-builder.Services.AddHealthChecks()
-    // .AddNpgSql(builder.Configuration.GetSection("DatabaseSettings:ConnectionString").Value, // Obs: tava dando erro
-    //     name: "postgreSQL", tags: new string[] { "db", "data" })
-    .AddRedis(builder.Configuration.GetSection("DatabaseSettings:ConnectionStringRedis").Value,
-        name: "redis", tags: new string[] { "cache", "data" });
-
-builder.Services.AddHealthChecksUI(opt =>
-{
-    opt.SetEvaluationTimeInSeconds(15); //time in seconds between check
-    opt.MaximumHistoryEntriesPerEndpoint(60); //maximum history of checks
-    opt.SetApiMaxActiveRequests(1); //api requests concurrency
-
-    opt.AddHealthCheckEndpoint("default api", "/health"); //map health check api
-}).AddInMemoryStorage();
-
-#endregion
-
 builder.Services.AddDbContext<TechContext>(options => options
-        .UseNpgsql("User ID=postgres;Password=T3cHCh@113ng3;Host=localhost;Port=5432;Database=postgres;Pooling=true;")); // Mudar para ConnectionString do JSON // Obs: tava dando erro
+        .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))); // Mudar para ConnectionString do JSON // Obs: tava dando erro
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserUseCase, UserUseCase>();
@@ -42,8 +23,12 @@ builder.Services.AddTransient<IUserUseCase, UserUseCase>();
 builder.Services.AddTransient<IIngredientRepository, IngredientRepository>();
 builder.Services.AddTransient<IIngredientUseCase, IngredientUseCase>();
 
+builder.Services.AddTransient<ITagRepository, TagRepository>();
+builder.Services.AddTransient<ITagUseCase, TagUseCase>();
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -59,16 +44,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-#region [Healthcheck]
-
-app.UseHealthChecks("/health", new HealthCheckOptions
-{
-    Predicate = _ => true,
-    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse,
-}).UseHealthChecksUI(h => h.UIPath = "/health-ui");
-
-#endregion
 
 app.MapControllers();
 
-app.Run();
+using var scope = app.Services.CreateScope();
+
+var context = scope.ServiceProvider.GetRequiredService<TechContext>();
+await context.Database.MigrateAsync();
+
+await app.RunAsync();
