@@ -9,7 +9,7 @@ namespace Infra.Repositories.Common;
 public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRepository<TEntity>
     where TEntity : BaseEntity, IAggregateRoot
 {
-    private readonly TechContext _context;
+    protected readonly TechContext _context;
 
     protected EfRepository(TechContext context) : base(context)
     {
