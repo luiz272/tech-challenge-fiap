@@ -19,4 +19,11 @@ public class Order : BaseEntity, IAggregateRoot
     public Guid CustomerId { get; private set; }
     public double Discount { get; private set; }
     public OrderStatus Status { get; private set; }
+
+    public static Order CreateOrder(Guid customerId, double discount, OrderStatus status)
+    {
+        return new Order(customerId, discount,  status);
+    }
+
+
 }

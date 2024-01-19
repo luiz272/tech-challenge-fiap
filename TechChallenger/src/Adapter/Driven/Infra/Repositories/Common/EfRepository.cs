@@ -9,7 +9,7 @@ namespace Infra.Repositories.Common;
 public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRepository<TEntity>
     where TEntity : BaseEntity, IAggregateRoot
 {
-    private readonly TechContext _context;
+    protected readonly TechContext _context;
 
     protected EfRepository(TechContext context) : base(context)
     {
@@ -17,7 +17,7 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
     }
 
     public IEnumerable<TEntity> GetAll() =>
-        DbSet.AsNoTracking().ToListAsync().Result;
+        DbSet.AsNoTracking().Where(w => w.DeleteAt != null).ToListAsync().Result;
 
     public void Add(TEntity entity)
     {

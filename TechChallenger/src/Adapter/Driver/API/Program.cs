@@ -26,6 +26,18 @@ builder.Services.AddTransient<IIngredientUseCase, IngredientUseCase>();
 builder.Services.AddTransient<ITagRepository, TagRepository>();
 builder.Services.AddTransient<ITagUseCase, TagUseCase>();
 
+builder.Services.AddTransient<IOrderRepository, OrderRepository>();
+builder.Services.AddTransient<IOrderUseCase, OrderUseCase>();
+
+
+builder.Services.AddTransient<IOrdersProductsRepository, OrdersProductsRepository>();
+
+builder.Services.AddTransient<IOrdersIngredientsRepository, OrdersIngredientsRepository>();
+
+builder.Services.AddTransient<IProductsIngredientsRepository, ProductsIngredientsRepository>();
+
+
+
 var app = builder.Build();
 
 
@@ -47,9 +59,9 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-using var scope = app.Services.CreateScope();
+//using var scope = app.Services.CreateScope();
 
-var context = scope.ServiceProvider.GetRequiredService<TechContext>();
-await context.Database.MigrateAsync();
+//var context = scope.ServiceProvider.GetRequiredService<TechContext>();
+//await context.Database.MigrateAsync();
 
 await app.RunAsync();

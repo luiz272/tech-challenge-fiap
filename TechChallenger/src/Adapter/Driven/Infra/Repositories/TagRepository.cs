@@ -7,7 +7,7 @@ namespace Infra.Repositories;
 
 public class TagRepository : EfRepository<Tag>, ITagRepository
 {
-    public TagRepository(TechContext context) : base(context)
-    {
-    }
+    public TagRepository(TechContext context) : base(context) { }
+
+
 }
