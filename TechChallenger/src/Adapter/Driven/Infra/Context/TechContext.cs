@@ -1,5 +1,6 @@
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Infra.Context;
 
@@ -19,4 +20,9 @@ public class TechContext : DbContext
     public DbSet<ProductsIngredients> ProductsIngredients { get; set; }
     public DbSet<Tag> Tags { get; set; }
     public DbSet<ProductsTags> ProductsTags { get; set; }
+
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+    }
 }

@@ -9,6 +9,5 @@ namespace Infra.Repositories;
 public class UserRepository : EfRepository<User> ,IUserRepository
 {
     public UserRepository(TechContext context) : base(context)
-    {
-    }
+    { }
 }
