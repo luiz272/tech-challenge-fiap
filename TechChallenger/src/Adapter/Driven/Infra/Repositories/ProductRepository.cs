@@ -1,0 +1,13 @@
+using Domain.Entities;
+using Domain.Repositories;
+using Infra.Context;
+using Infra.Repositories.Common;
+
+namespace Infra.Repositories;
+
+public class ProductRepository : EfRepository<Product>, IProductRepository
+{
+    public ProductRepository(TechContext context) : base(context)
+    {
+    }
+}

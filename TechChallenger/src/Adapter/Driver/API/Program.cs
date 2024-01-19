@@ -26,6 +26,9 @@ builder.Services.AddTransient<IIngredientUseCase, IngredientUseCase>();
 builder.Services.AddTransient<ITagRepository, TagRepository>();
 builder.Services.AddTransient<ITagUseCase, TagUseCase>();
 
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddTransient<IProductUseCase, ProductUseCase>();
+
 var app = builder.Build();
 
 
@@ -47,9 +50,9 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-using var scope = app.Services.CreateScope();
-
-var context = scope.ServiceProvider.GetRequiredService<TechContext>();
-await context.Database.MigrateAsync();
+// using var scope = app.Services.CreateScope();
+//
+// var context = scope.ServiceProvider.GetRequiredService<TechContext>();
+// await context.Database.MigrateAsync();
 
 await app.RunAsync();
