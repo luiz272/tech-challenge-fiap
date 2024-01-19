@@ -32,14 +32,14 @@ builder.Services.AddTransient<IProductUseCase, ProductUseCase>();
 builder.Services.AddTransient<IOrderRepository, OrderRepository>();
 builder.Services.AddTransient<IOrderUseCase, OrderUseCase>();
 
-
 builder.Services.AddTransient<IOrdersProductsRepository, OrdersProductsRepository>();
 
 builder.Services.AddTransient<IOrdersIngredientsRepository, OrdersIngredientsRepository>();
 
 builder.Services.AddTransient<IProductsIngredientsRepository, ProductsIngredientsRepository>();
 
-
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddTransient<IProductUseCase, ProductUseCase>();
 
 var app = builder.Build();
 
