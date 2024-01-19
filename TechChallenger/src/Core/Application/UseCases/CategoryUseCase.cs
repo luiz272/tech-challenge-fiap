@@ -16,5 +16,17 @@ public class CategoryUseCase : ICategoryUseCase
     {
         return _categoryRepository.GetAll();
     }
-
+    public void CreateCategory(Category category)
+    {
+        _categoryRepository.Add(category);
+    }
+    public void UpdateCategory(Category category)
+    {
+        _categoryRepository.Update(category);
+    }
+    public void RemoveCategory(Guid id)
+    {
+        var category = _categoryRepository.GetByIdAsync(id);
+        _categoryRepository.Remove(category);
+    }
 }

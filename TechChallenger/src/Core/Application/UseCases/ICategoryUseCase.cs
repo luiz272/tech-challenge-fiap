@@ -10,5 +10,8 @@ namespace Application.UseCases
     public interface ICategoryUseCase
     {
         IEnumerable<Category> GetAllCategories();
+        void CreateCategory(Category category);
+        void UpdateCategory(Category category);
+        void RemoveCategory(Guid id);
     }
 }
