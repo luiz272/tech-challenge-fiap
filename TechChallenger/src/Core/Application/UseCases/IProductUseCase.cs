@@ -7,7 +7,7 @@ namespace Application.UseCases
     {
         IEnumerable<Product> GetAllProducts();
         object CreateProduct(CreateProductViewModel product);
-        object UpdateProduct(Product product);
+        object UpdateProduct(UpdateProductViewModel product);
         void RemoveProduct(Guid id);
     }
 }

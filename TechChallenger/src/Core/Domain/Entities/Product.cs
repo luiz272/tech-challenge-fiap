@@ -31,4 +31,21 @@ public class Product : BaseEntity, IAggregateRoot
     {
         return new Product(name, categoryId, price, description, imageUrl, estimative);
     }
+
+    public void UpdateProduct(
+        string name,
+        Guid categoryId,
+        double price,
+        string description,
+        string imageUrl,
+        int estimative
+    )
+    {
+        Name = name;
+        CategoryId = categoryId;
+        Price = price;
+        Description = description;
+        ImageUrl = imageUrl;
+        Estimative = estimative;
+    }
 }

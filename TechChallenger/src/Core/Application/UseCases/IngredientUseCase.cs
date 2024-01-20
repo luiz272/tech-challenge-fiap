@@ -28,7 +28,7 @@ public class IngredientUseCase : IIngredientUseCase
 
     public void RemoveIngredient(Guid id)
     {
-        var ingredient = _ingredientRepository.GetByIdAsync(id);
+        var ingredient = _ingredientRepository.GetByIdAsync(id).Result;
         _ingredientRepository.Remove(ingredient);
     }
 }

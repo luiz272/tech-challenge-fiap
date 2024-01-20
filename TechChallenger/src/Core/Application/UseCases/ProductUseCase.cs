@@ -34,16 +34,32 @@ public class ProductUseCase : IProductUseCase
         return newProduct;
     }
 
-    public object UpdateProduct(Product product)
+    public object UpdateProduct(UpdateProductViewModel product)
     {
-        _productRepository.Update(product);
+        var existingProduct = _productRepository.GetByIdAsync(product.Id).Result;
+
+        if (existingProduct == null)
+        {
+            throw new InvalidOperationException("Produto não encontrado com o ID fornecido.");
+        }
+
+        existingProduct.UpdateProduct(
+            product.Name,
+            product.CategoryId,
+            product.Price,
+            product.Description,
+            product.ImageUrl,
+            product.Estimative
+        );
+
+        _productRepository.Update(existingProduct);
 
         return product;
     }
 
     public void RemoveProduct(Guid id)
     {
-        var product = _productRepository.GetByIdAsync(id);
+        var product = _productRepository.GetByIdAsync(id).Result;
         _productRepository.Remove(product);
     }
 }

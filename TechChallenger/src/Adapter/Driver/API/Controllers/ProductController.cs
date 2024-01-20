@@ -21,6 +21,7 @@ namespace API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            
             return Ok(_productUseCase.GetAllProducts());
         }
 
@@ -46,7 +47,7 @@ namespace API.Controllers
         }
         
         [HttpPut]
-        public IActionResult UpdateProduct([FromBody] Product productModel)
+        public IActionResult UpdateProduct([FromBody] UpdateProductViewModel productModel)
         {
             if (productModel == null)
             {
