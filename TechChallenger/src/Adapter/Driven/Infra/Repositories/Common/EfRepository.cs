@@ -17,7 +17,7 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
     }
 
     public IEnumerable<TEntity> GetAll() =>
-        DbSet.AsNoTracking().Where(w => w.DeleteAt != null).ToListAsync().Result;
+        DbSet.AsNoTracking().Where(w => w.DeleteAt == null).ToListAsync().Result;
 
     public void Add(TEntity entity)
     {

@@ -10,13 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94c81cd0-7c16-4bfd-86b1-6334c8fcc0f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Adapter/Driven/Infra/Repositories/IngredientRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Domain/Repositories/IIngredientRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TechChallenger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TechChallenger/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Adapter/Driver/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapter/Driver/API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapter/Driver/API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapter/Driver/API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapter/Driver/API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapter/Driver/API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Application/UseCases/ProductUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Application/UseCases/ProductUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Application/ViewModel/CreateProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Application/ViewModel/CreateProductViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Domain/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Domain/Entities/Product.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +33,38 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/292ff7304d9778dd29339a9c5574c95a99b1116f14da6ea1020b7f21598ab92/NpgSqlHealthCheckBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/35f3a54f5acb408a3e219b2de039f1a39557b7e4515f11238cba07b60c0ce/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/951ae8d4212555ed2042cdaab14de05c17e73221e3f5c17fc22282374a3cd/InvalidOperationException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driven/Infra/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Adapter/Driver/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Repositories/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Repositories/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Repositories/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Repositories/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Repositories/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Repositories/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Repositories/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jonatas/projects/tech-challenge-fiap/TechChallenger/src/Core/Domain/Repositories/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/Domain.Tests/features/CadastrarUsuario.feature" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/Domain.Tests/features/CadastrarUsuario.feature.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
   </component>
@@ -56,7 +83,7 @@
     ".NET Project.API.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/repositories",
+    "git-widget-placeholder": "feature/products",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,11 +171,35 @@
       <workItem from="1704388385912" duration="6647000" />
       <workItem from="1705005262061" duration="3154000" />
       <workItem from="1705443196365" duration="4412000" />
+      <workItem from="1705753200514" duration="2460000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Adapter/Driven/Infra/Repositories/Common/EfRepository.cs</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/src/Adapter/Driven/Infra/Repositories/Common/EfRepository.cs" initialLine="23" containingFunctionPresentation="Method 'Add'">
+            <startOffsets>
+              <option value="625" />
+            </startOffsets>
+            <endOffsets>
+              <option value="643" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

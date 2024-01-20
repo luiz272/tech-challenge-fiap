@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.ViewModel;
+using Domain.Entities;
 using Domain.Repositories;
 
 namespace Application.UseCases;
@@ -16,25 +17,33 @@ public class ProductUseCase : IProductUseCase
     {
         return _productRepository.GetAll();
     }
-    
-    public object CreateProduct(Product product)
-    {
-        _productRepository.Add(product);
 
-        return product;
+    public object CreateProduct(CreateProductViewModel product)
+    {
+        var newProduct = Product.CreateProduct(
+            product.Name,
+            product.CategoryId,
+            product.Price,
+            product.Description,
+            product.ImageUrl,
+            product.Estimative
+        );
+
+        _productRepository.Add(newProduct);
+
+        return newProduct;
     }
-    
+
     public object UpdateProduct(Product product)
     {
         _productRepository.Update(product);
 
         return product;
     }
-    
+
     public void RemoveProduct(Guid id)
     {
         var product = _productRepository.GetByIdAsync(id);
         _productRepository.Remove(product);
     }
-    
 }

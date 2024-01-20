@@ -30,6 +30,9 @@ builder.Services.AddTransient<IProductUseCase, ProductUseCase>();
 builder.Services.AddTransient<IOrderRepository, OrderRepository>();
 builder.Services.AddTransient<IOrderUseCase, OrderUseCase>();
 
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+builder.Services.AddTransient<ICategoryUseCase, CategoryUseCase>();
+
 builder.Services.AddTransient<IOrdersProductsRepository, OrdersProductsRepository>();
 
 builder.Services.AddTransient<IOrdersIngredientsRepository, OrdersIngredientsRepository>();

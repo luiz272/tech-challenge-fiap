@@ -20,4 +20,15 @@ public class Product : BaseEntity, IAggregateRoot
     public string Description { get; private set; }
     public string ImageUrl { get; private set; }
     public int Estimative { get; private set; }
+
+    public static Product CreateProduct(
+        string name,
+        Guid categoryId,
+        double price,
+        string description,
+        string imageUrl,
+        int estimative)
+    {
+        return new Product(name, categoryId, price, description, imageUrl, estimative);
+    }
 }
