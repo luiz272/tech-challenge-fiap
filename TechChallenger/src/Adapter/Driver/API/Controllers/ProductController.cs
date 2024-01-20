@@ -68,7 +68,7 @@ namespace API.Controllers
         }
 
         [HttpDelete]
-        public IActionResult DeleteProduct([FromBody] Guid id)
+        public IActionResult DeleteProduct([FromQuery] Guid id)
         {
             if (id == null)
             {

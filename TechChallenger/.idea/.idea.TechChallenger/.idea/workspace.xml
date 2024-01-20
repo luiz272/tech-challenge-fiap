@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94c81cd0-7c16-4bfd-86b1-6334c8fcc0f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Core/Application/ViewModel/UpdateProductViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TechChallenger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TechChallenger/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Adapter/Driver/API/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapter/Driver/API/Controllers/ProductController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Application/UseCases/IProductUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Application/UseCases/IProductUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Application/UseCases/ProductUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Application/UseCases/ProductUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Domain/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Domain/Entities/Product.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +167,7 @@
       <workItem from="1704388385912" duration="6647000" />
       <workItem from="1705005262061" duration="3154000" />
       <workItem from="1705443196365" duration="4412000" />
-      <workItem from="1705753200514" duration="3538000" />
+      <workItem from="1705753200514" duration="4115000" />
     </task>
     <servers />
   </component>
