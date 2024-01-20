@@ -1,9 +1,7 @@
 using Application.UseCases;
 using Domain.Repositories;
-using HealthChecks.UI.Client;
 using Infra.Context;
 using Infra.Repositories;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<TechContext>(options => options
-        .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))); // Mudar para ConnectionString do JSON // Obs: tava dando erro
+        .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserUseCase, UserUseCase>();
@@ -43,8 +41,6 @@ builder.Services.AddTransient<IProductUseCase, ProductUseCase>();
 
 var app = builder.Build();
 
-
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -58,7 +54,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 
 app.MapControllers();
 

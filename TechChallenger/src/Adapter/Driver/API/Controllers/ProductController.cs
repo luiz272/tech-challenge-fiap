@@ -1,4 +1,5 @@
 using Application.UseCases;
+using Application.ViewModel;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,7 +25,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateProduct([FromBody] Product productModel)
+        public IActionResult CreateProduct([FromBody] CreateProductViewModel productModel)
         {
             if (productModel == null)
             {
