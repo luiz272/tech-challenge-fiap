@@ -26,7 +26,7 @@ public class CategoryUseCase : ICategoryUseCase
     }
     public void RemoveCategory(Guid id)
     {
-        var category = _categoryRepository.GetByIdAsync(id);
+        var category = _categoryRepository.GetByIdAsync(id).Result;
         _categoryRepository.Remove(category);
     }
 }

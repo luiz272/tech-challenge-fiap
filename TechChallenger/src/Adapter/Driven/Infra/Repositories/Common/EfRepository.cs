@@ -1,4 +1,3 @@
-
 using Domain.Base;
 using Domain.Repositories.Common;
 using Infra.Context;
@@ -17,7 +16,7 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
     }
 
     public IEnumerable<TEntity> GetAll() =>
-        DbSet.AsNoTracking().Where(w => w.DeleteAt != null).ToListAsync().Result;
+        DbSet.AsNoTracking().Where(w => w.DeleteAt == null).ToListAsync().Result;
 
     public void Add(TEntity entity)
     {
@@ -28,9 +27,11 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
     public void AddRange(IEnumerable<TEntity> entities) =>
         DbSet.AddRange(entities);
 
-    public void Update(TEntity entity) =>
+    public void Update(TEntity entity)
+    {
         DbSet.Update(entity);
-
+        SaveChanges();
+    }
 
     public void UpdateRange(IEnumerable<TEntity> entities) =>
         DbSet.UpdateRange(entities);
@@ -43,13 +44,15 @@ public abstract class EfRepository<TEntity> : RepositoryBase<TEntity>, IAsyncRep
 
     public void RemoveRange(IEnumerable<TEntity> entities) =>
         DbSet.RemoveRange(entities);
-    
+
     private void SaveChanges()
     {
         // Chame o método SaveChanges do DbContext para persistir as alterações no banco de dados.
         _context.SaveChanges();
     }
 
-    public TEntity GetByIdAsync(Guid id) =>
-         DbSet.AsNoTracking().FirstOrDefault(e => e.Id == id);
+    public async Task<TEntity> GetByIdAsync(Guid id)
+    {
+        return await DbSet.AsNoTracking().FirstOrDefaultAsync(e => e.Id == id);
+    }
 }
