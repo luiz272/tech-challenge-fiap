@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Infra.Repositories
 {
-    public class ProductsTagsRepository : EfRepository<Product>, IProductRepository
+    public class ProductsTagsRepository : EfRepository<ProductsTags>, IProductsTagsRepository
     {
         public ProductsTagsRepository(TechContext context) : base(context)
         {

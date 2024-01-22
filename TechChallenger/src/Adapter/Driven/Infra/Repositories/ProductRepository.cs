@@ -9,5 +9,13 @@ public class ProductRepository : EfRepository<Product>, IProductRepository
 {
     public ProductRepository(TechContext context) : base(context)
     {
+        
+    }
+
+    public IEnumerable<Product> GetByCategory(Guid id)
+    {
+        var products = _context.Products.Where(p => p.CategoryId == id);
+
+        return products;
     }
 }
