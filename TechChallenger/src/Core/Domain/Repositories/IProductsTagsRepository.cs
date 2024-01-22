@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Repositories
 {
-    internal interface IProductsTagsRepository : IAsyncRepository<ProductsTags>
+    public interface IProductsTagsRepository : IAsyncRepository<ProductsTags>
     {
     }
 }

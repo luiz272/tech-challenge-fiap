@@ -62,4 +62,10 @@ public class ProductUseCase : IProductUseCase
         var product = _productRepository.GetByIdAsync(id).Result;
         _productRepository.Remove(product);
     }
+
+    public IEnumerable<Product> GetByCategory(Guid id)
+    {
+        var products = _productRepository.GetByCategory(id);
+        return products;
+    }
 }

@@ -62,7 +62,7 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error creating product: {ex.Message}");
+                _logger.LogError($"Error updating product: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -84,6 +84,27 @@ namespace API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Error creating product: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpGet]
+        public IActionResult GetProductsByCategory([FromQuery] Guid id)
+        {
+            if (id == null)
+            {
+                return BadRequest("Invalid id data");
+            }
+
+            try
+            {
+                var products = _productUseCase.GetByCategory(id);
+
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error category not found: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
