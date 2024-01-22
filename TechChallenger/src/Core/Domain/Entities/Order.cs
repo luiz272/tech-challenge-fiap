@@ -25,5 +25,31 @@ public class Order : BaseEntity, IAggregateRoot
         return new Order(customerId, discount,  status);
     }
 
+    public void MoveToNextStep()
+    {
+        Status = GetNextStatus(Status);
+    }
+
+    private OrderStatus GetNextStatus(OrderStatus currentStatus)
+    {
+        switch (currentStatus)
+        {
+            case OrderStatus.Received:
+                return OrderStatus.InProgress;
+
+            case OrderStatus.InProgress:
+                return OrderStatus.Ready;
+
+            case OrderStatus.Ready:
+                return OrderStatus.Finished;
+
+            case OrderStatus.Finished:
+                return currentStatus;
+
+            default:
+                return currentStatus;
+        }
+    }
+
 
 }

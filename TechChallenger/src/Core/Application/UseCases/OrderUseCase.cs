@@ -30,35 +30,62 @@ namespace Application.UseCases
             return _orderRepository.GetAll();
         }
 
-        public object Post(OrderViewModel data)
+        public object Post(CreateOrderViewModel data)
         {
-            var order = Order.CreateOrder(data.CustomerId, data.Discount, Domain.Enums.OrderStatus.Received);
-
-            _orderRepository.Add(order);
-
-            var orderProducts = new List<OrdersProducts>();
-
-            foreach (var productItem in data.OrdersProducts)
+            try
             {
-                orderProducts.Add(OrdersProducts.CreateOrdersProducts(order.Id, productItem.ProductId, productItem.Quantity));
+                var order = Order.CreateOrder(data.CustomerId, data.Discount, Domain.Enums.OrderStatus.Received);
 
-                var ordersIngredients = new List<OrdersIngredients>();
+                _orderRepository.Add(order);
 
-                var productIngredients = _productsIngredientsRepository.GetByProductId(productItem.ProductId);
+                var orderProducts = new List<OrdersProducts>();
 
-                foreach(var productIngredientItem in productIngredients)
+                foreach (var productItem in data.OrdersProducts)
                 {
-                    foreach (var ingredientItem in data.OrdersIngredients)
+                    orderProducts.Add(OrdersProducts.CreateOrdersProducts(order.Id, productItem.ProductId, productItem.Quantity));
+
+                    var ordersIngredients = new List<OrdersIngredients>();
+
+                    var productIngredients = _productsIngredientsRepository.GetByProductId(productItem.ProductId);
+
+                    foreach (var productIngredientItem in productIngredients)
                     {
-                        ordersIngredients.Add(OrdersIngredients.CreateOrdersIngredients(productIngredientItem.IngredientId, order.Id, ingredientItem.ProductId, ingredientItem.Quantity));
+                        foreach (var ingredientItem in data.OrdersIngredients)
+                        {
+                            ordersIngredients.Add(OrdersIngredients.CreateOrdersIngredients(productIngredientItem.IngredientId, order.Id, ingredientItem.ProductId, ingredientItem.Quantity));
+                        }
                     }
+
+                    _ordersProductsRepository.AddRange(orderProducts);
+                    _ordersIngredientsRepository.AddRange(ordersIngredients);
                 }
 
-                _ordersProductsRepository.AddRange(orderProducts);
-                _ordersIngredientsRepository.AddRange(ordersIngredients);
+                return order;
             }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
 
-            return order;
+        public bool NextStep(Guid orderId)
+        {
+            try
+            {
+                var order = _orderRepository.GetByIdAsync(orderId).Result;
+
+                if (order.Status == Domain.Enums.OrderStatus.Finished) return false;
+
+                order.MoveToNextStep();
+
+                _orderRepository.Update(order);
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
     }

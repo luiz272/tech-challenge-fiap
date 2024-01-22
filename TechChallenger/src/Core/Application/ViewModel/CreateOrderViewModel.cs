@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.ViewModel
 {
-    public class OrderViewModel
+    public class CreateOrderViewModel
     {
         public Guid CustomerId { get; set; }
 

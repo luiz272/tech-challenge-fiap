@@ -11,7 +11,7 @@ namespace Application.UseCases
     public interface IOrderUseCase 
     {
         IEnumerable<Order> GetAllOrder();
-
-        object Post(OrderViewModel data);
+        object Post(CreateOrderViewModel data);
+        bool NextStep(Guid orderId);
     }
 }
