@@ -10,7 +10,7 @@ namespace API.Controllers
     public class OrderController : Controller
     {
         private readonly ILogger<OrderController> _logger;
-        private IOrderUseCase _orderUseCase;
+        private readonly IOrderUseCase _orderUseCase;
         public OrderController(IOrderUseCase orderUseCase, ILogger<OrderController> logger)
         {
             _orderUseCase = orderUseCase;

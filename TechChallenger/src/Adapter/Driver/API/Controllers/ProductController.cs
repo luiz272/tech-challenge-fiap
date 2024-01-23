@@ -19,6 +19,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [Route("/")]
         public IActionResult Get()
         {
             
@@ -89,7 +90,8 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetProductsByCategory([FromQuery] Guid id)
+        [Route("GetProductsByCategory")]
+        public IActionResult GetProductsByCategory(Guid id)
         {
             if (id == null)
             {
