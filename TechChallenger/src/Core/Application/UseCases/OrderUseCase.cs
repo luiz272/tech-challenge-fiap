@@ -1,11 +1,6 @@
 ﻿using Application.ViewModel;
 using Domain.Entities;
 using Domain.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.UseCases
 {
@@ -88,5 +83,11 @@ namespace Application.UseCases
             }
         }
 
+        public IEnumerable<Order> GetQueue()
+        {
+            var orders = _orderRepository.GetQueue();
+
+            return orders;
+        }
     }
 }

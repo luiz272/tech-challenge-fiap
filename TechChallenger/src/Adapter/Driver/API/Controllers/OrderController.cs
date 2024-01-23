@@ -1,7 +1,6 @@
 ﻿using Application.UseCases;
 using Application.ViewModel;
 using Microsoft.AspNetCore.Mvc;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace API.Controllers
 {
@@ -59,6 +58,23 @@ namespace API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Error creating product: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpGet]
+        [Route("GetQueue")]
+        public IActionResult GetQueue()
+        {
+            try
+            {
+                var result = _orderUseCase.GetQueue();
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error get queue: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
