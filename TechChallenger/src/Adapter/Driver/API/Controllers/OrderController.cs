@@ -39,7 +39,7 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error creating product: {ex.Message}");
+                _logger.LogError($"Error creating order: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -58,7 +58,7 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error creating product: {ex.Message}");
+                _logger.LogError($"Error creating order: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
