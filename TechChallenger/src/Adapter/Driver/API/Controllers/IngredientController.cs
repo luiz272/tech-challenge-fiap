@@ -1,6 +1,7 @@
 using Application.UseCases;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace API.Controllers
 {
@@ -17,6 +18,12 @@ namespace API.Controllers
             _ingredientUseCase = ingredientUseCase;
         }
 
+        /// <summary>
+        /// Busca todos os ingredientes.
+        /// </summary>
+        /// <returns>Uma lista de ingredientes.</returns>
+        [SwaggerOperation(Summary = "Busca todos os ingredientes.", Description = "Uma lista de ingredientes disponíveis.")]
+        [SwaggerResponse(200, "OK", typeof(IEnumerable<Category>))]
         [HttpGet]
         public IActionResult Get()
         {

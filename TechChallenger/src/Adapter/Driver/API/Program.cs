@@ -1,3 +1,4 @@
+using System.Reflection;
 using Application.UseCases;
 using Domain.Repositories;
 using HealthChecks.UI.Client;
@@ -9,7 +10,12 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    options.IncludeXmlComments(xmlPath);
+});
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<TechContext>(options => options
@@ -52,7 +58,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tech Challenge v1");
+});
 
 app.UseHttpsRedirection();
 
